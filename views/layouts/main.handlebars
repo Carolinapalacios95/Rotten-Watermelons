@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
     <title>Spoiled Watermellons</title>
 </head>
 <body>
+    {{#if user}}
+      <header>
+        <!-- Header content for logged-in users -->
+      </header>
+
+      <main>
+        {{{body}}}
+      </main>
+
+      <footer>
+        <!-- Footer content for logged-in users -->
+      </footer>
+    {{else}}
+      {{!-- Content for non-logged-in users (e.g., login screen) --}}
+      <main>
+        {{{logIn}}}
+      </main>
+    {{/if}}
 
 </body>
 </html>
