@@ -9,17 +9,10 @@
 </head>
 <body>
     {{#if user}}
-      <header>
-        <!-- Header content for logged-in users -->
-      </header>
-
+    {{!-- content for logged in user which would end up being the homepage.handlebars --}}
       <main>
         {{{body}}}
       </main>
-
-      <footer>
-        <!-- Footer content for logged-in users -->
-      </footer>
     {{else}}
       {{!-- Content for non-logged-in users (e.g., login screen) --}}
       <main>
