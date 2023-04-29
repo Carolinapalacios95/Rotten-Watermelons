@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/style.css">
-    <title>Spoiled Watermellons</title>
-</head>
-<body>
-    {{#if user}}
-    {{!-- content for logged in user which would end up being the homepage.handlebars --}}
-      <main>
-        {{{body}}}
-      </main>
-    {{else}}
-      {{!-- Content for non-logged-in users (e.g., login screen) --}}
-      <main>
-        {{{logIn}}}
-      </main>
-    {{/if}}
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/css/style.css">
+  <title>Spoiled Watermelons</title>
+</head>
+
+<body>
+  <header>
+   {{#if loggedIn}}
+      <nav>
+        <ul>
+          {{!-- href will refer to the routes so when its clicked it goes to said route... "/" would be homepage --}}
+          <li><a href="/">Spoiled Watermelons</a></li>
+          <li><a href="/popular">Most Popular</a></li>
+          <li><a href="/genre">Genres</a></li>
+          <li><a href="/reviews">Reviews</a></li>
+          <li><button class="btn" id="logout">Logout</button></li>
+        </ul>
+      </nav>
+    {{else}}
+      <header>
+        <h1>Spoiled Watermelons</h1>
+      </header>
+    {{/if}}
+  </header>
+
+ {{{body}}}
+ 
 </body>
+
 </html>
