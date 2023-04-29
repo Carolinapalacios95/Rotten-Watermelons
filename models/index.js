@@ -1,10 +1,42 @@
 const User = require('./User');
-// below was an example used for the miniproject solved that imports one of the models called project.js
-// const Project = require('./Project');
+const Review = require('./Review');
+const Movie = require('./Movie')
+const Genre = require('./Genre')
 
-// below we ill also add aditional tables
-// module.exports = { User, Project }; this is an example
-module.exports = { User };
+User.hasMany(Review, {
+    foreignkey: 'user_id',
+});
+
+Review.belongsTo(User, {
+    foreignkey: 'user_id',
+});
+
+Movie.hasMany(Review, {
+    foreignkey: 'movie_id'
+});
+
+Review.belongsTo(Movie, {
+    foreignKey: 'movie_id'
+});
+
+Genre.hasMany(Movie, {
+    foreignKey: 'genre_id'
+});
+
+Movie.belongsTo(Genre, {
+    foreignKey: 'genre_id'
+});
+
+
+
+
+
+
+
+
+
+
+module.exports = { User, Review, Movie };
 
 
 // additional tables will have to be made
