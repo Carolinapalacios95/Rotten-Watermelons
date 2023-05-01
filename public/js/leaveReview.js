@@ -22,5 +22,5 @@ async function newFormHandler(event) {
 }
 
 document
-  .querySelector(".new-review-form")
+  .querySelector(".newReviewBtn")
   .addEventListener("submit", newFormHandler);
