@@ -14,7 +14,6 @@ Genre.init(
         genre_name: {
             type: DataTypes.STRING,
             allowNull: false,
-            isIn: [['Horror', 'Action', 'Romance', 'Drama', 'Comedy', 'Sci-Fi',]],
         },
     },
     {

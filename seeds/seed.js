@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 const { User } = require('../models');
 
 const userData = require('./userData.json');
+const movieData = require('./movieData.json');
 
 // insturctional example below
 /**
