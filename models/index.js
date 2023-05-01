@@ -36,7 +36,4 @@ Movie.belongsTo(Genre, {
 
 
 
-module.exports = { User, Review, Movie };
-
-
-// additional tables will have to be made
+module.exports = { User, Review, Movie, Genre };
