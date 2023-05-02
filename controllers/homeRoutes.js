@@ -1,27 +1,34 @@
 const router = require('express').Router();
 
 // add the additional table data in the {tableExample, User}
-const { User } = require('../models');
+const { User, Movie } = require('../models');
 const withAuth = require('../utils/auth');
 
-// instructional example below
-/**
- * router.get('/', withAuth, async (req, res) => {
+
+ router.get('/', async (req, res) => {
   try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+    const movieData = await Movie.findAll({
+
     });
 
-    const users = userData.map((project) => project.get({ plain: true }));
+    const movies = movieData.map((movie) => movie.get({ plain: true }));
 
     res.render('homepage', {
-      users,
+      movies,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
+ });
+
+router.get("/signup", (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
+  }
+
+  res.render("signup");
 });
 
 router.get('/login', (req, res) => {
@@ -32,7 +39,6 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
- */
 
 
 module.exports = router;
