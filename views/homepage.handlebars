@@ -1,3 +1,9 @@
+{{#if logged_in}}
+
+{{else}}
+<div><button><a href="/login">Login</a></button></div>
+<div><button><a href="/signup">Sign Up</a></button></div>
+{{/if}}
 <div id="carousel" class="carousel slide" data-bs-ride="true">
   <div class="carousel-inner">
     <div class="carousel-item active">
