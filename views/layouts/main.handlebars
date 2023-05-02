@@ -13,7 +13,7 @@
 <body>
   <header>
    {{#if loggedIn}}
-      <nav>
+      <nav class="loggedInNavbar">
         <ul>
           {{!-- href will refer to the routes so when its clicked it goes to said route... "/" would be homepage --}}
           <li><a href="/">Spoiled Watermelons</a></li>
@@ -24,7 +24,7 @@
         </ul>
       </nav>
     {{else}}
-      <header>
+      <header class="logoutHeader">
         <h1>Spoiled Watermelons</h1>
       </header>
     {{/if}}
