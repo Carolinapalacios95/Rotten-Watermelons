@@ -8,12 +8,7 @@ const withAuth = require('../utils/auth');
  router.get('/', async (req, res) => {
   try {
     const movieData = await Movie.findAll({
-      include: [
-        {
-          model: Movie,
-          attributes: ["poster_image"],
-        },
-      ],
+
     });
 
     const movies = movieData.map((movie) => movie.get({ plain: true }));
