@@ -11,7 +11,7 @@ const withAuth = require('../utils/auth');
       include: [
         {
           model: Movie,
-          attributes: ["title"],
+          attributes: ["poster_image"],
         },
       ],
     });
