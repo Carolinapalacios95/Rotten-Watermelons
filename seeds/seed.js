@@ -1,13 +1,11 @@
 // changed file name to js as we using this to seed
 const sequelize = require('../config/connection');
-const { User } = require('../models');
+const { User, Movie} = require('../models');
 
 const userData = require('./userData.json');
 const movieData = require('./movieData.json');
 
-// insturctional example below
-/**
- * const seedDatabase = async () => {
+const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
   await User.bulkCreate(userData, {
@@ -19,4 +17,4 @@ const movieData = require('./movieData.json');
 };
 
 seedDatabase();
- */
+
