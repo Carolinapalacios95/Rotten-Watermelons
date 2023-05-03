@@ -2,8 +2,10 @@
 const sequelize = require('../config/connection');
 const { User, Movie} = require('../models');
 
+
 const userData = require('./userData.json');
 const movieData = require('./movieData.json');
+// const genreData = require('./genreData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -12,6 +14,10 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
+
+  await Movie.bulkCreate(movieData);
+
+  // await Genre.bulkCreate(genreData);
 
   process.exit(0);
 };

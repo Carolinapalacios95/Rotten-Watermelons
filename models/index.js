@@ -19,13 +19,13 @@ Review.belongsTo(Movie, {
     foreignKey: 'movie_id'
 });
 
-Genre.hasMany(Movie, {
-    foreignKey: 'genre_id'
-});
+// Genre.hasMany(Movie, {
+//     foreignKey: 'genre_id'
+// });
 
-Movie.belongsTo(Genre, {
-    foreignKey: 'genre_id'
-});
+// Movie.belongsTo(Genre, {
+//     foreignKey: 'genre_id'
+// });
 
 
 

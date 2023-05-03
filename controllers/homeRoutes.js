@@ -2,17 +2,15 @@ const router = require('express').Router();
 
 // add the additional table data in the {tableExample, User}
 const { User, Movie, Review } = require('../models');
-const { getAttributes } = require('../models/User');
+// const { getAttributes } = require('../models/User');
 const withAuth = require('../utils/auth');
 
 
- router.get('/', async (req, res) => {
+ router.get('/', withAuth, async (req, res) => {
   try {
-    const movieData = await Movie.findAll({
+    const MovieData = await Movie.findAll();
 
-    });
-
-    const movies = movieData.map((movie) => movie.get({ plain: true }));
+    const movies = MovieData.map((movie) => movie.get({ plain: true }));
 
     res.render('homepage', {
       movies,
