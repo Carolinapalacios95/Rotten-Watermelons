@@ -19,13 +19,13 @@ Movie.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        genre_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'genre',
-                key: 'id',
-            },
-        },
+        // genre_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'genre',
+        //         key: 'id',
+        //     },
+        // },
     },
     {
         sequelize,

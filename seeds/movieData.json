@@ -1,10 +1,5 @@
 [
     {
-        "title": "",
-        "poster_image": "",
-        "genre_id": 1
-    },
-    {
         "title": "Interstellar",
         "poster_image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQUw076GR7JpnfExoBLTMpiE9otUzk518SylUdC1roF6Ah63NS9",
         "genre_id": 6
@@ -20,3 +15,4 @@
         "genre_id": 6
     }
 ]
+
