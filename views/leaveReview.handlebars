@@ -1,3 +1,9 @@
+{{#if logged_in}}
+
+{{else}}
+<div><button><a href="/login">Login</a></button></div>
+<div><button><a href="/signup">Sign Up</a></button></div>
+{{/if}}
 <div>
     <h3>Leave a New Review</h3>
 </div>
@@ -12,16 +18,17 @@
             <textarea class="form-input" id="review-content" name="content"></textarea>
         </div>
         <div class="review">
-            <h3>Leave a Review:</h3>
+
             <form>
                 <select name="rating">
-                    {{#each [1, 2, 3, 4, 5]}}
-                    <option value="{{this}}">{{this}}</option>
-                    {{/each}}
-                    <div class="form-group">
-                        <button id="newReviewBtn" type="submit">Create</button>
-                    </div>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
                 </select>
+                <button id="newReviewBtn" type="submit">Create</button>
+
             </form>
         </div>
     </form>
