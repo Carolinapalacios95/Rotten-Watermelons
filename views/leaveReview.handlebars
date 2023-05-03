@@ -1,3 +1,9 @@
+{{#if logged_in}}
+
+{{else}}
+<div><button><a href="/login">Login</a></button></div>
+<div><button><a href="/signup">Sign Up</a></button></div>
+{{/if}}
 <div>
     <h3>Leave a New Review</h3>
 </div>
@@ -11,8 +17,17 @@
             <label for="content">Review</label>
             <textarea class="form-input" id="review-content" name="content"></textarea>
         </div>
-        <div class="form-group">
-            <button id="newReviewBtn" type="submit">Create</button>
+        <div class="review">
+            <form>
+                <select name="rating">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <button id="newReviewBtn" type="submit">Create</button>
+            </form>
         </div>
     </form>
 </div>
