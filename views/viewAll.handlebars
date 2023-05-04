@@ -1,7 +1,25 @@
-<section class="viewAllContainer">
+{{!-- {{#if logged_in}}
+{{else}}
+{{/if}} --}}
+
+    <h1>testing</h1>
+{{#each reviews as |review|}}
+    <section class="container">
+        <h2>{{review.title}}</h2>
+        <p>{{review.description}}</p>
+        <p>Rating: {{review.rating}}</p>
+        {{!-- <h3>{{movie.title}}</h3>
+        <img src={{movie.poster_image}}> --}}
+  {{!-- </section> --}}
+{{/each}}
+
+
+
+
+{{!-- <section class="viewAllContainer">
     <h1>Movie Name</h1>
     <div>
         <h2>review#</h2>
         <h2>emoji for review</h2>
     </div>
-</section>
+</section> --}}
