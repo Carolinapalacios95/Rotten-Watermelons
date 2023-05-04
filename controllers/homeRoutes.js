@@ -37,33 +37,4 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-
-
-// get back to this
-router.get('/api/movies/', async (req, res)=>{
-  const movieData = await Movie.findAll()
-})
-
-
-router.get('/api/movies/:id', async (req, res)=>{
-  const movieData = await Movie.findByPk(req.params.id,{
-    include: [
-      {
-        model: User,
-      attributes: ['username']
-    },
-    {
-      model: Review,
-      attributes: ['title','description', 'rating']
-    }
-      ]
-
-  })
-})
-router.get('/api/movies', withAuth, (req, res)=>{
-  res.render('leavereview', {
-    ...User,
-    logged_in: true
-  })
-})
 module.exports = router;

@@ -1,13 +1,16 @@
 async function newFormHandler(event) {
   event.preventDefault();
-  const title = document.querySelector("#review-title").value;
-  const review = document.querySelector("#review-content").value;
+  const title = document.querySelector("#review-title").value.trim();
+  const description = document.querySelector("#review-description").value.trim();
+  const rating = document.querySelector("#review-rating").value;
 
-  const response = await fetch(`/api/review`, {
+if (title && description && rating) {
+  const response = await fetch(`/api/movies`, {
     method: "POST",
     body: JSON.stringify({
       title,
-      review,
+      description,
+      rating,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -20,6 +23,7 @@ async function newFormHandler(event) {
     alert("Failed to add review");
   }
 }
+};
 
 document
   .querySelector(".newReviewBtn")
