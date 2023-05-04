@@ -1,18 +1,15 @@
 [
     {
         "title": "Interstellar",
-        "poster_image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQUw076GR7JpnfExoBLTMpiE9otUzk518SylUdC1roF6Ah63NS9",
-        "genre_id": 6
+        "poster_image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQUw076GR7JpnfExoBLTMpiE9otUzk518SylUdC1roF6Ah63NS9"
     },
     {
         "title": "Marriage Story",
-        "poster_image": "https://m.media-amazon.com/images/M/MV5BY2FmNjZmNzgtZGM3MC00ZjIxLTliMTItMjlmMDY1MmNlZmQ3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
-        "genre_id": 4
+        "poster_image": "https://m.media-amazon.com/images/M/MV5BY2FmNjZmNzgtZGM3MC00ZjIxLTliMTItMjlmMDY1MmNlZmQ3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
     },
     {
         "title": "Synchronic",
-        "poster_image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRZc7faonZ7-QWjHR4iw_m1f9lMyA2svE8MbLK4IYrbQRKC9hZU",
-        "genre_id": 6
+        "poster_image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRZc7faonZ7-QWjHR4iw_m1f9lMyA2svE8MbLK4IYrbQRKC9hZU"
     }
 ]
 
