@@ -2,6 +2,6 @@
     {
         "title": "Awesome movie!",
         "description": "It was my one of my top faves so far!",
-        "rating": 5
+        "rating": "5"
     }
 ]

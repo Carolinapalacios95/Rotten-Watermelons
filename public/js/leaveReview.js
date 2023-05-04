@@ -5,7 +5,7 @@ async function newFormHandler(event) {
   const rating = document.querySelector("#review-rating").value;
 
 if (title && description && rating) {
-  const response = await fetch(`/api/movies/${id}`, {
+  const response = await fetch(`/api/movies/`, {
     method: "POST",
     body: JSON.stringify({
       title,
