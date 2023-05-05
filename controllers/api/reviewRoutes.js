@@ -30,11 +30,5 @@ router.get('/', withAuth, async (req, res)=>{
     res.status(500).json(err);
   }
 });
-//     res.render('viewAll', {
-//       ...User,
-//       logged_in: true
-//     })
-// })
-
 
 module.exports = router;
