@@ -9,7 +9,7 @@ if (title && description && rating) {
   var newurl = new URL(url);
   const movieId = newurl.pathname.split("/").pop();
   console.log("movie", movieId)
-  const testmovie = `/api/movies/${movieId}`
+  const testmovie = `/movies/${movieId}`
   console.log(testmovie);
   const response = await fetch (testmovie, {
     method: "POST",

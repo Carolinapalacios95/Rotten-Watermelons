@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const express = require('express');
 const session = require("express-session");
 
-
+//Create a new User
 router.post('/signup', async (req, res) => {
   try {
     console.info(req.body);
@@ -13,6 +13,7 @@ router.post('/signup', async (req, res) => {
       password: req.body.password,
     });
 
+// Set up sessions with a 'loggedIn' variable set to `true`
     req.session.save(() => {
       req.session.user_id = newUser.id;
       req.session.logged_in = true;
@@ -24,6 +25,7 @@ router.post('/signup', async (req, res) => {
   }
 });
 
+// Log new user in if valid userdata & password are found
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { username: req.body.username } });
@@ -58,6 +60,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// Logs out User
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
