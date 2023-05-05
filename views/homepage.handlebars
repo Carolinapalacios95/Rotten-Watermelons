@@ -1,6 +1,6 @@
 {{#if logged_in}}
 
-<a href="/leave-review">Leave a Review!</a>
+
 
 {{else}}
 <div><button><a href="/login">Login</a></button></div>
@@ -12,6 +12,7 @@
     <section class="container">
     <h3>{{movie.title}}</h3>
     <img src={{movie.poster_image}}>
+    <a href="/api/movies/{{movie.id}}">Leave a Review!</a>
   </section>
 {{/each}}
 </div>

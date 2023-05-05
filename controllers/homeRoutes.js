@@ -27,14 +27,14 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('logIn');
 });
 
 router.get('/signup', (req, res) => {
   if(req.session.logged_in){
     res.redirect('/login')
   }
-  res.render('signup');
+  res.render('signUp');
 });
 
 module.exports = router;
