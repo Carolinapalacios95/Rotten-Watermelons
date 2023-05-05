@@ -8,6 +8,7 @@ router.get('/', async (req, res)=>{
 });
 
 router.post('/:id', withAuth, async (req, res)=>{
+  console.log("incoming request")
   try {
     const newReview = await Review.create({
       title: req.body.title,
@@ -21,8 +22,6 @@ router.post('/:id', withAuth, async (req, res)=>{
     res.status(400).json(err);
   }
 });
-
-module.exports = router;
 
 router.get('/:id', withAuth, async (req, res)=>{
     const movieData = await Movie.findByPk(req.params.id,{

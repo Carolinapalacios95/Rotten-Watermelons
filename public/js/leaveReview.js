@@ -5,7 +5,13 @@ async function newFormHandler(event) {
   const rating = document.querySelector("#review-rating").value;
 
 if (title && description && rating) {
-  const response = await fetch(`/api/movies/`, {
+  var url = document.location.href;
+  var newurl = new URL(url);
+  const movieId = newurl.pathname.split("/").pop();
+  console.log("movie", movieId)
+  const testmovie = `/api/movies/${movieId}`
+  console.log(testmovie);
+  const response = await fetch (testmovie, {
     method: "POST",
     body: JSON.stringify({
       title,
@@ -26,5 +32,5 @@ if (title && description && rating) {
 };
 
 document
-  .querySelector(".newReviewBtn")
+  .querySelector(".new-review-form")
   .addEventListener("submit", newFormHandler);
