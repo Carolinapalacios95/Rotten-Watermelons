@@ -22,7 +22,7 @@ Review.init(
         rating: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            // len: [1,5],
+            // len: [1
         },
         user_id: {
             type: DataTypes.INTEGER,

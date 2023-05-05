@@ -1,4 +1,4 @@
 node_modules
 .env
 DS_STORE
-# removed package json since anyone that clones this will need that to npm i the libraries instead spending an hour trying figure out everything they need.
+
