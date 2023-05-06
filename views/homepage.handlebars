@@ -8,7 +8,7 @@
 <div>
 {{#each movies as |movie|}}
     <section class="container">
-    <h3>{{movie.title}}</h3>
+    <h3>{{movie.title}} (Average Rating: {{movie.avgRating}}/5)</h3>
     <img src={{movie.poster_image}}>
     <a href="/movies/{{movie.id}}">Leave a Review!</a>
   </section>

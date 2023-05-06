@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Movie, Review } = require('../models');
 const withAuth = require('../utils/auth');
+const {average} = require('average-rating');
 
 // Get all reviews and JOIN with user & movie data
 router.get('/reviews', withAuth, async (req, res)=>{
@@ -35,15 +36,30 @@ router.get('/reviews', withAuth, async (req, res)=>{
 // Get all movies and JOIN with user & review data
  router.get('/', withAuth, async (req, res) => {
   try {
-    const MovieData = await Movie.findAll();
+    const MovieData = await Movie.findAll({
+      include: {
+        model: Review,
+        attributes: ['rating'],
+      }
+    });
 
-    const movies = MovieData.map((movie) => movie.get({ plain: true }));
+    let movies = MovieData.map((movie) => movie.get({ plain: true }));
+    movies = movies.map((movie) => {
+      const ratings = [0,0,0,0,0];
+
+      movie.reviews.forEach( (review) => {
+        ratings[review.rating -1] = ratings[review.rating -1] +1;
+      });
+      return {...movie, avgRating: average(ratings)};
+    });
 
     res.render('homepage', {
       movies,
       logged_in: req.session.logged_in,
     });
+
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
  });
@@ -90,6 +106,7 @@ router.post('/movies/:id', withAuth, async (req, res)=>{
       description: req.body.description,
       rating: req.body.rating,
       user_id: req.session.user_id,
+      movie_id: req.params.id
     });
 
     res.status(200).json(newReview);
