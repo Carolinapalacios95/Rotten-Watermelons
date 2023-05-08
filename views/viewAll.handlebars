@@ -1,4 +1,4 @@
-<div class="container-fluid mt-4" style="display:flex; flex-wrap:wrap">
+<div class="container mt-4" style="display:flex; flex-wrap:wrap">
   {{#each reviews as |review|}}
   <div class="card mb-3 mx-auto" style="max-width: 540px;">
     <div class="row g-0">
@@ -6,9 +6,10 @@
         <img src="{{review.movie.poster_image}}" class="img-fluid rounded-start" alt="movie-poster" width="1793" height="2686">
       </div>
       <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{review.movie.title}}</h5>
-          <p class="card-text">Rating: {{review.rating}}/5</p>
+        <div class="card-body text-center">
+          <h5 class="card-title mb-3">{{review.movie.title}}</h5>
+          <p class="card-text mb-3">Rating: {{review.rating}}/5</p>
+          <h6 class="card-title">{{review.title}}</h6>
           <p class="card-text">{{review.description}}</p>
           <p class="card-text"><small class="text-body-secondary">- {{review.user.username}}</small></p>
         </div>
