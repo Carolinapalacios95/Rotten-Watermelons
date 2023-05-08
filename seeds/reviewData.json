@@ -1,7 +1,58 @@
 [
     {
+        "title": "What a trip",
+        "description": "Never get tired of rewatching this and noticing things I missed the first time around!",
+        "rating": "5",
+        "user_id": 5,
+        "movie_id": 1
+    },
+    {
         "title": "Awesome movie!",
-        "description": "It was my one of my top faves so far!",
-        "rating": "5"
+        "description": "Honestly, would watch again.",
+        "rating": "5",
+        "user_id": 6,
+        "movie_id": 3
+    },
+    {
+        "title": "Best Batman movie hands down",
+        "description": "Christian Bale & Heath Ledger were phenomenal in this movie",
+        "rating": "5",
+        "user_id": 7,
+        "movie_id": 9
+    },
+    {
+        "title": "One of my favorite Star Wars movies",
+        "description": "My favorite part of this movie is when the empire strikes back... really didn't see that one coming.",
+        "rating": "4",
+        "user_id": 8,
+        "movie_id": 14
+    },
+    {
+        "title": "I suddenly forget the name of this movie",
+        "description": "I was gonna leave a review but then I remembered I can't talk about it.",
+        "rating": "5",
+        "user_id": 9,
+        "movie_id": 13
+    },
+    {
+        "title": "Epic fighting scenes",
+        "description": "The one scene where Neo dodged the bullets was insane, Keanu Reeves must have trained incredibly hard to pull that one off!",
+        "rating": "5",
+        "user_id": 10,
+        "movie_id": 22
+    },
+    {
+        "title": "So many twists & turns in the plot!",
+        "description": "You're probably going to get lost watching this the first time around, so if you miss a scene you should probably rewind it.",
+        "rating": "3",
+        "user_id": 11,
+        "movie_id": 17
+    },
+    {
+        "title": "Watching from my cell",
+        "description": "After watching this, I'm gonna go ahead and try digging my own tunnel out of here and see if it works!",
+        "rating": "3",
+        "user_id": 12,
+        "movie_id": 4
     }
 ]
