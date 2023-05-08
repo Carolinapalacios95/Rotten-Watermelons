@@ -51,11 +51,11 @@ There is no installation required for this website.
 
 ## Usage
 
-A user will first be routed to the login page when accessing the website. Once there, a user may either log in or click signup to be to access the full website. After signing in, a user will then be redirected to the homepage where they will be able to view all the movies in the database, their average rating and click on 'Leave a Review' to be taken to a page where they can leave a review for a specific movie. A user can also click on the Reviews tab to be taken to a page where they can view all the reviews left by other users. 
+A user will first be routed to the login page when accessing the website. Once there, a user may either log in or click signup in order to access the full website. After signing in, a user will then be redirected to the homepage where they will be able to view all the movies in the database, a movie's average rating and click on 'Leave a Review' to be taken to a page where they can leave a review for a specific movie. A user can also click on the Reviews tab to be taken to a page where they can view all the reviews left by other users. 
 
 ## Collaborators
 
-Mmdelmain <br>
+Mdelmain <br>
 <a href="https://github.com/mdelmain/">
   <img src="https://contrib.rocks/image?repo=mdelmain/test-repo" />
 </a><br>
