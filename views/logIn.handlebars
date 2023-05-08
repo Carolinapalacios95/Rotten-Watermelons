@@ -1,19 +1,21 @@
-<section class="login-container">
-    <form class="login-form">
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
+<div class="container-fluid mt-4">
+  <div class="card mb-3 mx-auto" style="max-width: 540px;">
+    <h5 class="card-header text-center">Login</h5>
+    <div class="card-body">
+      <form class="login-form">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" name="username">
         </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password">
         </div>
-        <div>
-            <button class="loginBtn" type="submit" name="login">Login</button>
-            <div><button><a href="/signup">Sign Up</a></button></div>
-        </div>
-    </form>
-
-</section>
+        <p>Not registered? <a href="/signup">Sign Up</a></p>
+        <button type="submit" class="loginBtn btn btn-light">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
 
 <script src="./js/login.js"></script>

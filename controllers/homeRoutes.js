@@ -90,7 +90,14 @@ router.get('/movies/:id', withAuth, async (req, res)=>{
     }
       ]
   });
+
   const movie = movieData.get({ plain: true });
+
+  const ratings = [0, 0, 0, 0, 0];
+  movie.reviews.forEach( (review) => {
+    ratings[review.rating - 1] = ratings[review.rating - 1] + 1;
+  });
+  movie.avgRating = average(ratings);
 
   res.render('leaveReview', {
     ...movie,
