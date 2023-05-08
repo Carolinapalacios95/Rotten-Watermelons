@@ -1,41 +1,44 @@
-{{#if logged_in}}
+<div class="container-fluid mt-4">
+  <div class="card mb-3 mx-auto" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{poster_image}}" class="img-fluid rounded-start" alt="movie-poster" width="1793" height="2686">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">Average Rating: {{avgRating}}/5</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-{{else}}
-<div><button><a href="/login">Login</a></button></div>
-<div><button><a href="/signup">Sign Up</a></button></div>
-{{/if}}
-
-<section class="container">
-    <h3>{{title}}</h3>
-
-  <img src={{poster_image}}>
-</section>
-
-<div>
-    <h3>Leave a New Review</h3>
+  <div class="card mb-3 mx-auto" style="max-width: 540px;">
+    <h5 class="card-header text-center">Leave a Review</h5>
+    <div class="card-body">
+      <form class="new-review-form">
+        <div class="mb-3">
+          <label for="review-title" class="form-label">Review Title</label>
+          <input type="text" class="form-control" id="review-title" name="title">
+        </div>
+        <div class="mb-3">
+          <label for="review-description" class="form-label">Review</label>
+          <textarea class="form-control" id="review-description" name="content" rows="5"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="review-rating" class="form-label">Select a rating</label>
+          <select class="form-select" id="review-rating" name="rating">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-light" id="newReviewBtn">Submit</button>
+      </form>
+    </div>
+  </div>
 </div>
-<div class="newReviewContainer">
-    <form class="new-review-form">
-        <div>
-            <label for="title">Review Title</label>
-            <input class="form-input" type="text" id="review-title" name="title" />
-        </div>
-        <div class="form-group">
-            <label for="content">Review</label>
-            <textarea class="form-input" id="review-description" name="content"></textarea>
-        </div>
-        <div class="review">
-                <select id="review-rating" name="rating">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-                <button id="newReviewBtn" type="submit">Create</button>
-        </div>
-    </form>
-</div>
-
 
 <script src="/js/leaveReview.js"></script>
