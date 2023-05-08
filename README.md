@@ -33,17 +33,27 @@ This is a dynamic full-stack web application that allows a user to view movies s
 ## Demo
 
 You can view the live deployed application at Heroku by clicking the following link:
-[Spoiled Watermelons](link to Heroku)
+[Spoiled Watermelons](https://spoiled-watermelons.herokuapp.com/)
 
-The following images display the web application's appearance and functionality:
+The following images display the web application's appearance, functionality, and responsiveness:
 
-![Homepage-Demo](./assets/homepage.PNG)
+ Homepage
+![Homepage-Demo](./public/assets/homepage.PNG)
 
-![Login-Demo](./assets/login.PNG)
+Login Page
+![Login-Demo](./public/assets/login.PNG)
 
-![Signup-Demo](./assets/signup.PNG)
+Signup Page
+![Signup-Demo](./public/assets/signup.PNG)
 
-![Reviews-Demo](./assets/review.PNG)
+Reviews Page
+![Reviews-Demo](./public/assets/reviews.PNG)
+
+Tablet View
+![Homepage-Tablet](./public/assets/homepage-tablet.PNG)
+
+Mobile View
+![Homepage-Mobile](./public/assets/homepage-mobile.PNG)
 
 ## Installation
 
